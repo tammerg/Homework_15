@@ -1,0 +1,11 @@
+{
+  "name": "homework_15",
+  "version": "1.0.0",
+  "description": "Creating a user authentication website, complete with registration and login as well as pages for students and instructors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tammer Galal",
+  "license": "ISC"
+}
