@@ -20,6 +20,44 @@ app.get('/register', function(req, res){
   res.render('registration');
 });
 
+var Student = sequelize.define('student', {
+	studentName: {
+		type: Sequelize.STRING,
+    field: 'student_name',
+		allowNull: false,
+		unique: true
+	},
+	password: {
+		type: Sequelize.STRING,
+		allowNull: false,
+	}
+}, {
+	hooks: {
+		beforeCreate: function(input){
+			input.password = bcrypt.hashSync(input.password, 10);
+		}
+	}
+});
+
+var Instructor = sequelize.define('instructor', {
+	InstructorName: {
+		type: Sequelize.STRING,
+    field: 'Instructor_name',
+		allowNull: false,
+		unique: true
+	},
+	password: {
+		type: Sequelize.STRING,
+		allowNull: false,
+	}
+}, {
+	hooks: {
+		beforeCreate: function(input){
+			input.password = bcrypt.hashSync(input.password, 10);
+		}
+	}
+});
+
 // database connection via sequelize
 sequelize.sync().then(function() {
   app.listen(PORT, function() {
