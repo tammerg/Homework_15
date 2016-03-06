@@ -1,23 +1,15 @@
-<form class="form-horizontal col-md-4">
-  <fieldset>
-    <legend>Register!</legend>
-    <div class="form-group">
-      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-      <div class="col-lg-10">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Save Password
-            <button class="btn btn-primary" type="submit" name="button">Register!</button>
-          </label>
-        </div>
-      </div>
-    </div>
-  </fieldset>
+<form method="POST" action="/register" class="form-inline">
+  <div class="form-group">
+    <label for="Jane">First Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" name="firstName">
+    <label for="Jane">Last Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" name="lastName">
+    <label for="Jane">Email</label>
+    <input type="email" class="form-control" id="exampleInputName2" placeholder="Jane Doe" name="email">
+    <label for="Jane">username</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" name="userName">
+    <label for="Jane">password</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" name="password">
+    <button type="submit">Submit</button>
+  </div>
 </form>
