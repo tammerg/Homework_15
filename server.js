@@ -140,5 +140,16 @@ app.post('/register', function(req, res){
     password: req.body.password
   });
 });
+app.post('/login', function (req, res) {
+  userStudent.findOne({
+    where: {
+      userName: req.body.userName,
+    }
+  }).then(function(){
+    res.redirect('index');
+  }).catch(function(error){
+    throw error
+  });
+});
 //port listen
 app.listen(PORT);
